@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Informer.Views.Special.SendQuestionPage" Title="{Binding Title}" x:Name="Content">
+    <StackLayout StyleClass="Foreground" Padding="5" Spacing= "5" Orientation="Vertical" >
+        <Label Text="Имя:"/>
+        <Entry TextChanged="Item_TextChanged" x:Name="Name"/>
+        <Label Text="Email:"/>
+        <Entry TextChanged="Item_TextChanged" x:Name="Email" Keyboard="Email"/>
+        <Label Text="Телефон:"/>
+        <Entry TextChanged="Item_TextChanged" x:Name="Phone" Keyboard="Telephone"/>
+        <Label Text="Вопрос:"/>
+        <Editor x:Name="Text" VerticalOptions="FillAndExpand" />
+        <Button StyleClass="DarkButton" Clicked="Send_Clicked" Text="Отправить"/>
+    </StackLayout>
+</ContentPage>

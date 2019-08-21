@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:Controls="clr-namespace:Informer.Controls" 
+    xmlns:Utils="clr-namespace:Informer.Utils"
+    x:Class="Informer.Views.LoadingPage" 
+    Title="{Binding Title}">
+    
+    <ContentPage.Content>
+        <StackLayout StyleClass="Foreground" Orientation="Vertical" Spacing="0" Padding="0, 5, 0, 0" VerticalOptions="FillAndExpand">
+
+            <Image Aspect="AspectFit" Source="{Utils:LocalImageResource logo.png}" />
+            <Image Aspect="AspectFit" x:Name="ExpoImage" />
+            
+            <StackLayout Orientation="Vertical" Spacing="20" VerticalOptions="FillAndExpand" Padding="0, 20, 0, 0">
+                <Label Text="Идет загрузка данных..." HorizontalOptions="CenterAndExpand"/>
+
+                <ProgressBar x:Name="BarProgress" Margin="5"/>
+
+                <Button Margin="5" Clicked="Handle_Break_Clicked" Text="Прервать загрузку и перейти в приложение" VerticalOptions="End"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

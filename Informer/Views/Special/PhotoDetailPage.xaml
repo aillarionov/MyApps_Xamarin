@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:Controls="clr-namespace:Informer.Controls" 
+    x:Class="Informer.Views.Special.PhotoDetailPage" 
+    Title="{Binding Title}"
+    Padding="0">
+    <ContentPage.Content>
+       <Controls:ZoomView VerticalOptions="FillAndExpand" IsClippedToBounds="true">
+            <Image Aspect="AspectFill" VerticalOptions="Start" HorizontalOptions="Start" >
+                <Image.Source >
+                    <UriImageSource Uri="{Binding Item.Photo.Uri}" CacheValidity="365.00:00:00.00"/> 
+                </Image.Source>
+            </Image>
+        </Controls:ZoomView>
+    </ContentPage.Content>
+</ContentPage>

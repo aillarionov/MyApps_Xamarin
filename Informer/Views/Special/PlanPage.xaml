@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabbedPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:Controls="clr-namespace:Informer.Controls" 
+    xmlns:Utils="clr-namespace:Informer.Utils"
+    x:Class="Informer.Views.PlanPage"
+    Title="{Binding Title}"
+    x:Name="TabbedControl">
+    <!--
+    <ContentPage Title="Арена" Padding="0">
+        <Controls:ZoomView VerticalOptions="FillAndExpand" IsClippedToBounds="true">
+            <Image Aspect="AspectFill" VerticalOptions="Start" HorizontalOptions="Start" Source="{Utils:LocalImageResource arena.png}"/>
+        </Controls:ZoomView>
+    </ContentPage>
+    <ContentPage Title="Фойе" Padding="0">
+        <Controls:ZoomView VerticalOptions="FillAndExpand" IsClippedToBounds="true">
+            <Image Aspect="AspectFit" VerticalOptions="Start" HorizontalOptions="Start" Source="{Utils:LocalImageResource foie.png}"/>
+        </Controls:ZoomView>
+    </ContentPage>
+    -->
+</TabbedPage>

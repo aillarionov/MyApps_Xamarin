@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:Controls="clr-namespace:Informer.Controls" 
+    xmlns:local="clr-namespace:Informer" 
+    x:Class="Informer.Views.Special.MembersPage" 
+    x:Name="BrowseSpecial.MembersPage"
+    Title="{Binding Title}">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:IsNullConverter x:Key="isNullConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout StyleClass="Background" Spacing="0">
+            <Picker StyleClass="Foreground" Margin="5" Title="Выбор тематики" x:Name="CategoryPicker" SelectedIndexChanged="Category_Changed"/>
+            <Entry StyleClass="Foreground" Margin="5, 0, 5, 5" Placeholder="Текст для поиска" x:Name="SearchQuery" TextChanged="Query_Change"/>
+            <ListView x:Name="ItemsListView" ItemsSource="{Binding Items}" VerticalOptions="FillAndExpand" RowHeight="130" CachingStrategy="RecycleElementAndDataTemplate" SeparatorVisibility="None" SeparatorColor="Transparent">
+    			<ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell Tapped="Handle_Tapped">
+                            <Grid Margin="0, 0, 0, 10" RowSpacing="0" ColumnSpacing="0">
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="70" />
+                                    <RowDefinition Height="50" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="100" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <Image Aspect="AspectFit" Margin="2" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2">
+                                    <Image.Source >
+                                        <UriImageSource Uri="{Binding Photo.Uri}" CacheValidity="365.00:00:00.00"/> 
+                                    </Image.Source>
+                                </Image>
+
+
+                                <Controls:HTMLLabel VerticalTextAlignment="Center" Margin="5" Text="{Binding Name}" FontSize="16" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2"/>
+
+                                <Button Clicked="Set_Favorite_Clicked" CommandParameter="{Binding .}" FontSize="10" IsVisible="{Binding Favorite, Converter={StaticResource isNullConverter}, ConverterParameter=true}" Text="В избранное" Margin="5" Grid.Row="1" Grid.Column="1" />
+                                <Button Clicked="Unset_Favorite_Clicked" CommandParameter="{Binding .}" FontSize="10" IsVisible="{Binding Favorite, Converter={StaticResource isNullConverter}, ConverterParameter=false}" Text="Исключить" Margin="5" Grid.Row="1" Grid.Column="1" />
+
+                                <Button Clicked="Item_Clicked" CommandParameter="{Binding .}" FontSize="10" Text="Подробнее" Margin="5" Grid.Row="1" Grid.Column="2" />
+
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+
+    			</ListView.ItemTemplate>
+    		</ListView> 
+        </StackLayout>
+</ContentPage.Content>
+</ContentPage>

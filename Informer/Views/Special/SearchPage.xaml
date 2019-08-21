@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:Controls="clr-namespace:Informer.Controls" 
+    xmlns:local="clr-namespace:Informer" 
+    x:Class="Informer.Views.Special.SearchPage" 
+    xmlns:Utils="clr-namespace:Informer.Utils"
+    x:Name="BrowseItemsPage"
+    Title="{Binding Title}">
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:IsNullConverter x:Key="isNullConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout StyleClass="Background" Spacing="0">
+            <Image Aspect="AspectFit" x:Name="ExpoImage" />
+            <Entry StyleClass="Foreground" Margin="5" Placeholder="Текст для поиска" TextChanged="Handle_Search" x:Name="SearchQuery"/>
+
+            <ListView x:Name="ItemsListView" ItemsSource="{Binding Items}" VerticalOptions="FillAndExpand" RowHeight="290" HasUnevenRows="false" CachingStrategy="RecycleElementAndDataTemplate" SeparatorVisibility="None" SeparatorColor="Transparent">
+    			<ListView.ItemTemplate>
+    				<DataTemplate>
+                        <ViewCell Tapped="Handle_Tapped">
+                            <Grid Margin="0, 0, 0, 10" RowSpacing="0" ColumnSpacing="0">
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="200" />
+                                    <RowDefinition Height="10" />
+                                    <RowDefinition Height="70" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="60" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="60" />
+                                </Grid.ColumnDefinitions>
+
+                                <Image Aspect="AspectFit" Margin="0, 10, 0, 0" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3">
+                                    <Image.Source >
+                                        <UriImageSource Uri="{Binding Photo.Uri}" CacheValidity="365.00:00:00.00"/> 
+                                    </Image.Source>
+                                </Image>
+
+                                <BoxView StyleClass="Splitter" VerticalOptions="End" HorizontalOptions="FillAndExpand" HeightRequest="1" Margin="5, 0" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"/>
+
+                                
+                                <Button StyleClass="IconButton" Margin="5" Clicked="Set_Favorite_Clicked" CommandParameter="{Binding .}" IsVisible="{Binding Favorite, Converter={StaticResource isNullConverter}, ConverterParameter=true}" Image="like.png" Grid.Row="2" Grid.Column="0" />
+                                <Button StyleClass="IconButton" Margin="5" Clicked="Unset_Favorite_Clicked" CommandParameter="{Binding .}" IsVisible="{Binding Favorite, Converter={StaticResource isNullConverter}, ConverterParameter=false}"  Image="liked.png" Grid.Row="2" Grid.Column="0" />
+
+                                <Controls:HTMLLabel Margin="5" VerticalTextAlignment="Center" FontSize="16" Text="{Binding Caption}" Grid.Row="2" Grid.Column="1" />
+
+                                <Button StyleClass="IconButton" Margin="5" Clicked="Item_Clicked" CommandParameter="{Binding .}" Image="link.png" Grid.Row="2" Grid.Column="2" />
+
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+    			</ListView.ItemTemplate>
+    		</ListView>
+        </StackLayout>
+</ContentPage.Content>
+</ContentPage>

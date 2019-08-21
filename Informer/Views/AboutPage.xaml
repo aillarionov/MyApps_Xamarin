@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:Controls="clr-namespace:Informer.Controls" x:Class="Informer.Views.AboutPage" Title="{Binding Title}">
+    <ContentPage.Content>
+        <ScrollView x:Name="Scroll" Orientation="Vertical" VerticalOptions="StartAndExpand">
+            <StackLayout StyleClass="Foreground" Orientation="Vertical" Spacing="0" Padding="0, 15, 0, 0" VerticalOptions="StartAndExpand">
+
+                <Image x:Name="MainImage" VerticalOptions="Start" Margin="0">
+                    <Image.Source >
+                        <UriImageSource Uri="{Binding Item.Photo.Uri}" CacheValidity="365.00:00:00.00"/> 
+                    </Image.Source>
+                </Image>
+
+                <StackLayout StyleClass="Foreground" Orientation="Vertical" VerticalOptions="Start" Margin="0, 5">
+                    <Controls:HTMLLabel x:Name="teeet" Margin="5" VerticalOptions="StartAndExpand" Text="{Binding Item.Text}"/>
+                </StackLayout>
+
+                <StackLayout x:Name="OtherPhotos" Orientation="Vertical" VerticalOptions="StartAndExpand" Spacing="10" Padding="0, 15, 0, 0">
+                </StackLayout>
+                
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

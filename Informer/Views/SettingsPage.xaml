@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:Controls="clr-namespace:Informer.Controls" 
+    xmlns:local="clr-namespace:Informer" 
+    x:Class="Informer.Views.SettingsPage" 
+    Title="{Binding Title}" 
+    x:Name="BrowseItemsPage">
+    <ContentPage.Content>
+        <ListView x:Name="ItemsListView" ItemsSource="{Binding Items}" VerticalOptions="FillAndExpand" RowHeight="300" HasUnevenRows="false" CachingStrategy="RecycleElementAndDataTemplate" SeparatorVisibility="None" SeparatorColor="Transparent">
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<ViewCell>
+                        <Grid Margin="0, 0, 0, 10" RowSpacing="0" ColumnSpacing="0">
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="40" />
+                                <RowDefinition Height="100" />
+                                <RowDefinition Height="50" />
+                                <RowDefinition Height="50" />
+                                <RowDefinition Height="50" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="150" />
+                            </Grid.ColumnDefinitions>
+
+                            <Label Margin="5" FontSize="14" Text="{Binding Group.Name}" Grid.Row="0" Grid.Column="0" />
+                            <Label Margin="5" FontSize="14" Text="{Binding Group.Date}" Grid.Row="0" Grid.Column="1" />
+                            
+                            <Image Aspect="AspectFit" Margin="0, 10, 0, 0" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
+                                <Image.Source >
+                                    <UriImageSource Uri="{Binding Group.Logo.Uri}" CacheValidity="365.00:00:00.00"/> 
+                                </Image.Source>
+                            </Image>
+
+                            <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="FillAndExpand" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">
+                                <Label Text="Посетитель" VerticalOptions="Center" HorizontalOptions="EndAndExpand"/>
+                                <Switch x:Name="IsPresenter" IsToggled="{Binding Config.IsPresenter}" Toggled="Handle_Toggled" VerticalOptions="Center" HorizontalOptions="Center"/>
+                                <Label Text="Участник" VerticalOptions="Center" HorizontalOptions="StartAndExpand"/>
+                            </StackLayout>
+
+                            <Button CommandParameter="{Binding .}" FontSize="12" Margin="5" Clicked="Handle_Load_Clicked" Text="Загрузить каталог для работы оффлайн" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"/>
+
+                            <Button CommandParameter="{Binding .}" FontSize="12" Margin="5" Clicked="Handle_Change_Clicked" Text="Выбрать" Grid.Row="4" Grid.Column="0"/>
+                            <Button CommandParameter="{Binding .}" FontSize="12" Margin="5" Clicked="Handle_Delete_Clicked" Text="Удалить" Grid.Row="4" Grid.Column="1"/>
+                            
+                        </Grid>
+					</ViewCell>
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</ListView> 
+</ContentPage.Content>
+</ContentPage>

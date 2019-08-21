@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Informer.App">
+	<Application.Resources>
+		<ResourceDictionary>
+            <Color x:Key="Primary">#A51730</Color>
+			<Color x:Key="PrimaryDark">#A51730</Color>
+
+            <Color x:Key="MainTextColor">Black</Color>
+
+            <Color x:Key="ButtonBorderColor">#C0C0C0</Color>
+            <Color x:Key="ButtonBackgroundColor">#A51730</Color>
+
+            <Color x:Key="MainBackgroundColor">#6C0E14</Color>
+            <Color x:Key="MainForegroundColor">White</Color>
+
+            <!-- >>>>>>  Pages >>>>>> -->
+			<Style TargetType="NavigationPage" ApplyToDerivedTypes="True">
+				<Setter Property="BarBackgroundColor" Value="{DynamicResource TitleColor}" />
+				<Setter Property="BarTextColor" Value="White" />
+                <Setter Property="BackgroundColor" Value="{DynamicResource MainBackgroundColor}" />
+			</Style>
+
+            <Style TargetType="ContentPage" ApplyToDerivedTypes="True">
+                <Setter Property="BackgroundColor" Value="{DynamicResource MainBackgroundColor}" />
+            </Style>
+
+            <!-- <<<<<<  Pages <<<<<< -->
+
+            <!-- >>>>>>  Menu >>>>>> -->
+            <Style TargetType="StackLayout" ApplyToDerivedTypes="True" Class="Menu">
+                <Setter Property="BackgroundColor" Value="{DynamicResource MainForegroundColor}" />
+            </Style>
+
+            <Style TargetType="StackLayout" ApplyToDerivedTypes="True" Class="MainLogo">
+                <Setter Property="BackgroundColor" Value="{DynamicResource TitleColor}" />
+            </Style>
+
+            <Style TargetType="BoxView" ApplyToDerivedTypes="True" Class="MainLogoSplitter">
+                <Setter Property="BackgroundColor" Value="{DynamicResource TitleLineColor}" />
+            </Style>
+
+            <!-- <<<<<<  Menu <<<<<< -->
+
+            <!-- >>>>>>  Button >>>>>> -->
+            <Style TargetType="Button" ApplyToDerivedTypes="True">
+                <Setter Property="TextColor" Value="{DynamicResource TextColor}"/>
+                <Setter Property="BorderColor" Value="{DynamicResource ButtonBorderColor}"/>
+                <Setter Property="BackgroundColor" Value="{DynamicResource ButtonBackgroundColor}"/>
+                <Setter Property="BorderWidth" Value="1"/>
+                <Setter Property="BorderRadius" Value="5"/>
+                <Setter Property="FontAttributes" Value="None"/>
+            </Style>
+
+            <Style TargetType="Button" ApplyToDerivedTypes="True" Class="DarkButton">
+                <Setter Property="TextColor" Value="{DynamicResource TextColor}"/>
+                <Setter Property="BorderColor" Value="{DynamicResource ButtonBorderColor}"/>
+                <Setter Property="BackgroundColor" Value="{DynamicResource ButtonBackgroundColor}"/>
+            </Style>
+
+            <Style TargetType="Button" ApplyToDerivedTypes="True" Class="MenuButton">
+                <Setter Property="TextColor" Value="{DynamicResource TextColor}"/>
+                <Setter Property="BorderColor" Value="Transparent"/>
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+            </Style>
+
+            <Style TargetType="Button" ApplyToDerivedTypes="True" Class="IconButton">
+                <Setter Property="TextColor" Value="{DynamicResource TextColor}"/>
+                <Setter Property="BorderColor" Value="Transparent"/>
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+            </Style>
+            <!-- <<<<<<  Button <<<<<< -->
+
+            <Style TargetType="ListView" ApplyToDerivedTypes="True">
+                <Setter Property="BackgroundColor" Value="{DynamicResource MainBackgroundColor}" />
+            </Style>
+
+            <Style TargetType="Grid" ApplyToDerivedTypes="True">
+                <Setter Property="BackgroundColor" Value="{DynamicResource MainForegroundColor}" />
+            </Style>
+
+
+            <Style TargetType="StackLayout" ApplyToDerivedTypes="True" Class="Background">
+                <Setter Property="BackgroundColor" Value="{DynamicResource MainBackgroundColor}" />
+            </Style>
+
+            <Style TargetType="StackLayout" ApplyToDerivedTypes="True" Class="Foreground">
+                <Setter Property="BackgroundColor" Value="{DynamicResource MainForegroundColor}" />
+            </Style>
+
+            <Style TargetType="Label" ApplyToDerivedTypes="True" Class="Foreground">
+                <Setter Property="BackgroundColor" Value="{DynamicResource MainForegroundColor}" />
+            </Style>
+
+            <Style TargetType="Picker" ApplyToDerivedTypes="True" Class="Foreground">
+                <Setter Property="BackgroundColor" Value="{DynamicResource MainForegroundColor}" />
+            </Style>
+
+            <Style TargetType="Entry" ApplyToDerivedTypes="True" Class="Foreground">
+                <Setter Property="BackgroundColor" Value="{DynamicResource MainForegroundColor}" />
+            </Style>
+
+            <Style TargetType="Image" ApplyToDerivedTypes="True" Class="Foreground">
+                <Setter Property="BackgroundColor" Value="{DynamicResource MainForegroundColor}" />
+            </Style>
+            
+            <Style TargetType="BoxView" ApplyToDerivedTypes="True" Class="Splitter">
+                <Setter Property="BackgroundColor" Value="{DynamicResource DividerColor}" />
+            </Style>
+
+            <Style TargetType="BoxView" ApplyToDerivedTypes="True" Class="SplitterI">
+                <Setter Property="BackgroundColor" Value="{DynamicResource MainForegroundColor}" />
+            </Style>
+
+
+            
+		</ResourceDictionary>
+	</Application.Resources>
+</Application>

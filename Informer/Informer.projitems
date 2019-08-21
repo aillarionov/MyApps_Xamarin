@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{8D4474BD-6A61-428A-AAE2-71537B79800A}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Informer</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Item.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\IDataStore.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AboutViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BaseViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ItemDetailViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ItemsViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\AboutPage.xaml.cs">
+      <DependentUpon>AboutPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ItemDetailPage.xaml.cs">
+      <DependentUpon>ItemDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ItemsPage.xaml.cs">
+      <DependentUpon>ItemsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Photo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Member.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\RPC\Connector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\RPC\RemoteFunctions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Album.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\MainMenu.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utils\MenuLink.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Special\MembersPage.xaml.cs">
+      <DependentUpon>MembersPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Special\MemberDetailPage.xaml.cs">
+      <DependentUpon>MemberDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Models\IItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utils\ContactsGenerator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Special\MapPage.xaml.cs">
+      <DependentUpon>MapPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Special\GetTicketPage.xaml.cs">
+      <DependentUpon>GetTicketPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Special\SendQuestionPage.xaml.cs">
+        <DependentUpon>SendQuestionPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Special\SendRequestPage.xaml.cs">
+              <DependentUpon>SendRequestPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Favorite.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utils\Favorites.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Special\FavoritesPage.xaml.cs">
+      <DependentUpon>FavoritesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Services\LocalDataStore.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\DataStore\CommonDataStore.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\DataStore\FavoritesDataStore.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\DataStore\AlbumsDataStore.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\News.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Special\NewsPage.xaml.cs">
+      <DependentUpon>NewsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Special\SearchPage.xaml.cs">
+      <DependentUpon>SearchPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Utils\Converters\IsNullConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\InitialPage.xaml.cs">
+      <DependentUpon>InitialPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Config.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\DataStore\ConfigDataStore.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\FixedPost.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utils\DataLoader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\ImageStore.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utils\ObservableProgress.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\IPhone.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\HTMLLabel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utils\IDisplaySettings.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\ZoomView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utils\ImageResourceExtension.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utils\ItemDetailOpener.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\LoadingPage.xaml.cs">
+      <DependentUpon>LoadingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Special\PhotoPage.xaml.cs">
+      <DependentUpon>PhotoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Special\PhotoDetailPage.xaml.cs">
+      <DependentUpon>PhotoDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Image.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Group.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GlobalConfig.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\SimpleGroup.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Special\PlanPage.xaml.cs">
+      <DependentUpon>PlanPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\GroupsPage.xaml.cs">
+      <DependentUpon>GroupsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Services\DataStore\GroupsDataStore.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utils\Serializer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Map.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Schema.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Plan.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utils\Converters\JsonColorConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utils\ExtensionMethods.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\SettingsPage.xaml.cs">
+      <DependentUpon>SettingsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Utils\SchemaEventArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\IAD.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\AboutPage.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ItemDetailPage.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ItemsPage.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Special\MembersPage.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Special\MemberDetailPage.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Special\MapPage.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Special\GetTicketPage.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Special\SendQuestionPage.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Special\SendRequestPage.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Special\FavoritesPage.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Special\NewsPage.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Special\SearchPage.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\InitialPage.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\logo.png">
+      <LogicalName>Resources.Images.logo.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\LoadingPage.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Special\PhotoPage.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Special\PhotoDetailPage.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Special\PlanPage.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\GroupsPage.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\SettingsPage.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Utils\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Services\RPC\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Views\Special\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Services\DataStore\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Utils\Converters\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Controls\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Resources\" />
+  </ItemGroup>
+</Project>
